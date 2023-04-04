@@ -1,0 +1,17 @@
+-Message Queue in Pizza Shop is an exmaple of Asynchronous Processing as the client do not need to wait continuosly fro response
+-It helps in prioritise tasks
+-Once there are multiple pizza shops/Servers and if any Server goes offline, now we have to redirect the order to other Servers.
+How can we detect that offline Server and send its ordr to other Server judiciously?
+-The issue is, once the Server goes down, the entire list of order goes down, so we need to have a database, which contains the 
+list of orders i.e the list of each order of every Server is stored in that database.
+-A Notifier is used to check heartbeat in each server frequently
+-A Load Balancing is also used to ensure that there is no duplicacy in request to Servers along with ensuring the right amount of
+load to each Server i.e Consistent Hashing ensures load balancing and avoid duplication of requests to Servers. 
+-The combination of Notifier, Load Balancer, Heartbeat in one thing is called Message/Task Queue.
+-Message/Task Queue takes tasks, persist them, assign them to the correct Server, wait for it to complete, if it is takin too long
+for acknowledgement, it feels that Server is offline and assignes it to the next Server. Multiple strategies are done to assign it.
+This is all encapsulated by a Message/Task Queue.
+-This is an important task in System Design using Message/Task Queue to get work done easily so that you can encapsulate all the
+complexity into just one thing.
+-This is the fundamental concept of System Design
+Ex- Rabbit MQ, JMS etc.

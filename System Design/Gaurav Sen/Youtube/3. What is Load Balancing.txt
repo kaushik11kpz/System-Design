@@ -1,0 +1,36 @@
+Consistent Hashing - relevant to the concept of Hashing objects
+Consistent Hashing has certain properties which is required if we are building system which can scale to a large extent
+
+If we aan algorithm in a computer and someone wants to use it regularly for their websites, we can provide that service.
+Now, our computer is serving as  a Server. Server serves a request via response.
+
+If your algorithms becomes popular, thousand requests are coming, you need to increase the number of Serves.
+Now, which the dilemma is, which Server will respond to which request. The idea is to maintaon the load of requests equally
+on each Server. 
+The concept of taking N server and trying to balance load equally on all of them is called Load Balancing.
+Here, the concept of Consistent Hashing helps us to do load balancing.
+
+Using request Id of each request r, we can use Hash function to hash and provide a number m, which can be m%N, and this m%N, results
+in numbers which are mapped to Servers
+      
+      h(r1) -> m%N
+      Let N=4;
+      h(10) -> 4%4 = 0 (This 0 is mapped to Server0(S0))
+      h(5) -> 13%4 = 1 (This 1 is mapped to Server1(S1))
+      h(6) -> 26%4 = 2 (This 2 is mapped to Server2(S2))
+      h(11) -> 11%4 = 3 (This 3 is mapped to Server3(S3))
+
+Load on each Server = X/N
+Load factor = 1/N
+The pie chart represent 25% load on each Server.
+
+Now, we need to add more Server because of our popularity
+-The total cost of change becomes very high(equal to M)
+-The entire system will not get bambozled, because previous accomodation of request and their Caches are of no use
+-Thus, we should avoid huges changes in the range of number we are Serving requests to
+-The over all change should be minimum
+The old standard way of Hashing doesnt work in this case, this is why we need more advance approaches like Consistent Hashing
+ 
+
+ 
+

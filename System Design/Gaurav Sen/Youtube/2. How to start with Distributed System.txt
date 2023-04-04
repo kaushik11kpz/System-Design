@@ -1,0 +1,12 @@
+1. Vertical Scaling - Optimise throughput using the same resource
+2. Preprocessing - Preparing before hands at non-peak hours
+-Now the system is set up. let's make it resilient
+3. Backup - eep backups of main resources and avoid single point of failure
+4. Horizontal Scaling - Hire more resources(Buying more machines/servers)
+5. Micorservices - Dividing responsibilities. All responsibilities are well defined for each resource
+6. Distributed System - Backup the entire system. Create whole new shops/system at another location/ local servers at different geographical locations
+   (Partitioning)
+7. Load Balance - To balance load and route traffic to the best possible way according to defined parameters
+8. Decoupling - Separation of concerns, Pizza shop manager should only care about pizza and delievery guy should care only about fastest delievery time
+9. Logging and Metrics - To daily log and perform metrics operation to see and resolve and daily issues
+10. Extensibilty- To use the same system again if required 

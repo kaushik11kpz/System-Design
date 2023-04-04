@@ -1,0 +1,17 @@
+Components-->
+1. Logical Entities - Data
+                    - Application Layer(Access the system/database)
+                    - Communication Protocol(HTTP/TCP/IP) - Helps components interacts with each other
+                    - Presentation Layer
+                    - Databases
+                    - cache
+                    - Message Queues
+                    - Infrastructure
+
+2. Tangible Entities - Text,Image,Video
+                     - Java, Python
+                     - API,RPCs, Messages
+                     - MongoDb, MySQl, Cassandra
+                     - Redis, MemeCache
+                     - Kafka, RabbitMQ
+                     - AWS, Azure, GCP

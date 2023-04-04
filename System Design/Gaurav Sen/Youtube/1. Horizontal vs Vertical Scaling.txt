@@ -1,0 +1,7 @@
+	HORIZONTAL            |             VERTICAL
+1. Load Balancing Required    |              N/A
+2. Resilient		      |        Single Point of Failure	
+3. Network calls are slow(RPC)|       Inter Process Communication
+4. Data Inconsistency         |           Consistent
+5. Scales well as users incr  |         Hardware Limit
+6. Long term                  |       Use it while starting

@@ -1,0 +1,25 @@
+-The problem in previous cases was because of adding and Removing Server as it completely changes the local data we had in 
+each Server.
+-Earlier we were using Hashing, but now to avoid above problem, we will be using Consistent Hashing.
+-Still, hasing all the request according to their Id's
+-Instead of using array, which can map Hash function from 0-M-1, we will use circular array.
+-Hashed request can be mapped to a point on the circular array.
+-Servers themselves have Ids, we can Hash these Server Ids using same or different Hash Function
+-We then take the remainder with search space(M), and map them also to the circular array
+-Now, whenever a request comes/maps to the circular array, we go clockwise and assign it to the nearest Server.
+-Load Factor = 1/N
+-Now, when we add a new Server, the change in each of these already deployed Server load is much lesser compared to previously only
+few of the Server load is affected rest remains minimal affected
+-Even if, one Server goes down, all the request of that Server is transffered to the nearest available Server 
+
+-This is the architecture we are chossing because Hashing is uniformly random and we can expect the distance between them also to
+be uniform. Since, distance is unifor, the load is uniform.
+
+-The problem with this aechitecture is this although theoretically, Load Factor=1/N, practically, skewed distribution of hashed function
+on circular array is encountered, when we have less amount of Server.
+This 
+-This is a System design problem which is solved by Engineers
+-To implement it practically and solve problem, we can use multiple Hash Function for hashing of each Server, thus every
+Server will be available at K locations(Virual Servers)
+-If we choose k value appropriately(Ex- log(M)), the chance of skewed distribution is reduced significantly.
+-All the operation of Server addition or removal, will not cause much cost of operation

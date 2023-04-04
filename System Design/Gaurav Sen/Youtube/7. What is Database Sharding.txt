@@ -1,0 +1,28 @@
+-Partitioning the range of request to different different Database Servers using one Key(user_Id) is called Database Sharding.
+-Partitioning which uses a Key to break data into pieces and allocate it to different Server is called Horizontal Partitioning.
+-Horizontal partitioning depends on one key, which is a attribute of data which we are storing.
+-Verical Partitioning used columsn to partiton data effectively.
+-In terms of Sharding Consisteny and Availability is of Database Servers is must required.
+-We can shard database on any stored attribute like, user_id, location(for tinder)
+-SHard is smaller in size, easier to maintain, faster performance.
+
+Problems in Sharding
+-Joins across shards takes time(expensive).
+-Fixed number of Shards. ----Using Hierarchal Sharding we can solve this problem
+
+Best Practices in Sharding
+-Create an index on these shard best on needed attribute as required by query(this can be on totally different attribute than 
+Horizontal Sharding. Ex-Age)--It improves reas=d and write performance
+-In case a Shard fail, we can implement a Master-Slave architecture. 
+
+Master-Slave architecture
+-In this architecture, multiple slaves always copies from
+master, a Write request always goes to the master, master is always most updated copy, while slaves continuosly poll the master
+and continuosly read from it.
+-A Read request can be distributed across slaves.
+-If master fails, slaves choose one master among themselves, thus good single point of fault tolerance.
+
+
+Conclusion
+-Conceptually, sharding is easy, but in practicality, it is difficult to implement because of Consistedncy requirement.
+-Learn Indexing, NoSQL Databases and other concepts before implementing Sharding.

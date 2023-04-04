@@ -1,0 +1,23 @@
+-Avantages of Monoliths
+1.Good for small teams.
+2.If load increase, monolith architecture horizontally scales out
+3.Lesser moving parts, less complexity.
+4.Less duplication of code for every service.
+5.Faster calls as no Remote Procedure Calls(RPCs) only function calls.
+
+-Disadvantages of Monoliths
+1.New member need more time and more context to understand the architecture.
+2.Deployments are complicated as no decoupled code, thus everyhring is affected for even small code changes.
+3.Single point of failure. Too much responsibilty on each Server.
+
+
+-Advantages of Microservices
+1.Easier to scale.
+2.Easier for newer member.
+3.Parallel development is easy.
+4.Easy deployment
+
+-Disadvantages of Monoliths
+1.Hard to design.
+2.A good indicator for a microservice to not be a microservice if it is talking only to a single microservice.
+3.Need skilled architects
