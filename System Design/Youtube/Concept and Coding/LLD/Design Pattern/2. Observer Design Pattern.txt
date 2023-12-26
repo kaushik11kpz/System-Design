@@ -1,0 +1,31 @@
+Question- Implement notify me feature in an out of stock product on Amazon website. When the product is available send notification to all the customers who have subscribed to this product using notify me button.
+Source- Asked in Walmart Round 3 Interview
+
+Solution:
+The Observer Design Pattern is a behavioral design pattern used in software engineering to create a one-to-many dependency between objects. This pattern defines a relationship where one object (the subject or publisher) maintains a list of its dependents (observers or subscribers) and notifies them of state changes, typically by calling one of their methods, when its state changes. This allows multiple objects to be informed and updated automatically when the subject's state changes without them having to poll the subject continuously.
+
+Key components of the Observer Design Pattern:
+
+Subject (Publisher):
+
+The subject is the object that holds the state and manages a list of observers.
+It provides methods to attach, detach, and notify observers.
+When the subject's state changes, it notifies all its registered observers.
+Observer (Subscriber):
+
+Observers are objects interested in the state changes of the subject.
+They implement an interface or inherit from a base class that defines the update method.
+The update method is called by the subject when its state changes, and it typically receives information about the change.
+The Observer Pattern provides a way to create loosely coupled systems, where subjects and observers are separate entities and do not need to have direct knowledge of each other. This promotes flexibility and extensibility in software design.
+
+--Observer Design Pattern
+-In Observer Design Pattern, we have an observable and observer.
+-Whenever the current state of the observable changes, it is notified to all the observer.
+-This is known as Observer DP.
+-Observable interface is associated with Observer interface using has a relationship.
+-Since multiple observer observe observable, thus it is a one to many relationship(0,*).
+-Now we will make concrete classes of both Observable interface and Observer interface, thus the association is is a relationship.
+-Now in the implmentation, we will create a has a relationship between Observer concrete class and Observable concrete class, that is, now
+we will have the object of Observable interface in observer concrete class, so that we exactly know for which change it is being notified for.
+-Example of Observer DP is Weather Station.
+
