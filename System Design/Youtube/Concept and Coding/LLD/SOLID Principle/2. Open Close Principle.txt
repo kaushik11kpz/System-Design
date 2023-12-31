@@ -1,0 +1,3 @@
+2. Open Closed Principle
+-A class should be open for extension but closed for modification.
+-An already tested class which is live and taking traffic, should not be modified instead it should be extended.

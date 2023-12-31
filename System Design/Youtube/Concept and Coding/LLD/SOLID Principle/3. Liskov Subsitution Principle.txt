@@ -1,0 +1,5 @@
+3. Liskov Substitution Principle
+-If class B is subtype of class A, then we should be able to replace object of A with B without breaking the behaviour of the program.
+-Subclass should extend the capability of parent class not narrow it down.
+-Child class should always have additional feature than parent class.
+-In parent class put only generic method which are common for all.

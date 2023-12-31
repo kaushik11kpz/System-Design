@@ -1,1 +1,11 @@
+Advantage of Solid Principle 
+-It helps us to write better code by
+1. Avoid Duplicate Code
+2. Easy to maintain
+3. Easy to understand
+4. Flexible Software
+5. Reduce Fliexibility
+
 1. Single Responsibility Principle
+-A class should have only one reason to change
+-So, if a certain functionality is changing, we need to change only in one class.

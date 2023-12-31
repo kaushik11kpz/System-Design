@@ -1,0 +1,4 @@
+4. Interface Segmentation Principle
+-Interface should be such, that client should not implement unnecessary functions they do not need.
+-Break interface into small pieces.
+
