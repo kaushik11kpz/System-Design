@@ -1,5 +1,9 @@
 package WithOpenClosedPrinciple;
 
-public class DatabaseInvoiceDAO {
+public class DatabaseInvoiceDAO implements InvoiceDAO{
+	
+	public void save(Invoice invoice) {
+		//save to DB
+	}
 
 }
