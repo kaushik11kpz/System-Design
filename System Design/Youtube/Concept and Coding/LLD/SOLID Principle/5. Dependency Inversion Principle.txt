@@ -1,3 +1,2 @@
 5- Dependency Inversion Principle
 -Class should depend on interface rather than concrete classes.
--

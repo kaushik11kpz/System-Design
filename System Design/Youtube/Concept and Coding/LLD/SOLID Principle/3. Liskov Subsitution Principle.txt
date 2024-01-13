@@ -3,3 +3,6 @@
 -Subclass should extend the capability of parent class not narrow it down.
 -Child class should always have additional feature than parent class.
 -In parent class put only generic method which are common for all.
+
+
+
