@@ -1,5 +1,5 @@
 package WithLiskovSubstitutionPrinciple;
 
-public class Bicycle {
+public class Bicycle extends Vehicle{
 
 }

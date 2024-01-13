@@ -1,5 +1,8 @@
 package WithLiskovSubstitutionPrinciple;
 
-public class EngineVehicle {
+public class EngineVehicle extends Vehicle{
 
+	public boolean hasEngine() {
+		return true;
+	}
 }

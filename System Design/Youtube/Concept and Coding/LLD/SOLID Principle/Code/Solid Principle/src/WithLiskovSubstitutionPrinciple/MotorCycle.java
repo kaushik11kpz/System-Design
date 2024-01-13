@@ -1,5 +1,5 @@
 package WithLiskovSubstitutionPrinciple;
 
-public class MotorCycle {
+public class MotorCycle extends EngineVehicle{
 
 }
