@@ -1,0 +1,6 @@
+-Latency vs Throughput
+-Availability vs Consistency(CAP Theorem)
+-Performance vs Scalability
+	-Vertical Scaling
+	-Horizontal Scaling
+

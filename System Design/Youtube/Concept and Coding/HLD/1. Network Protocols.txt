@@ -1,0 +1,53 @@
+#1. Network Protocol
+   -What is Client Server Model
+   -Peer to Peer Model(and learn about web sockets)
+   -HTTP vs TCP vs UDP vs FTP vs SMTP(POP,IMAP)
+   -Examples
+
+-Network Protocols defines the rule so that two system can communicate with each other.
+-There are 7 layers in networking
+-We will read about Application Layer and Transport Layer
+1. Application Layer is divided into 2 parts
+	A. Client Server Protocol
+		1. HTTP - 1 connection is created
+		2. FTP - 2 connections are created(Control Connection and Data Connection)
+			-Data Connection connection can be disconnected
+			-Control Connection always exists.
+			-FTP Data Connection is not encrypted.
+		3. SMTP/IMAP 
+			-SMTP - Used for sending the mail
+			-IMAP - Receiving/Accessing the mail
+			-SMTP is used with IMAP
+		4. WebSockets
+	B. Peer to Peer Protocol
+		1. WebRTC
+2. In Client Server model, client makes a request and server gives a response back.
+  -It is a One Way Communication.
+  -Client always initiates talk with server.
+  -HTTP, FTP, SMTP uses strategy.
+
+3.WebSocket is different
+-WebSocket is a bidirection network protocol.
+-Both Client and Server can talk to each otherm first.
+-WebSocket belongs to Client Server protocol.
+-WebSocket is utilised whenever we want to design a messaging application like whatsapp, telegram as we want two way communication.
+-Server needs to send information to client.
+
+4.Peer to Peer Protocol
+-All clients and server can talk with each other.
+-WebRTC is peer to peer protocol.
+-WebRTC used UDP, thus it is fast.
+
+5. Tansport Layer/Network Layer uses 2 types of protocols.
+	1. TCP/IP Protocol
+         -A virtual connection maintained
+	 -Data is converted into packets are transferred in sequences that packets follows ordering.
+	 -Acknowledgement is given for eack packet.
+	2. UDP/IP
+	 -No connection is maintained.
+	 -Data is divided into datagram and sent parallely
+	 -No acknowledgement, sequences or ordering is done
+	 -It is utilised in livestreaming and video calling
+
+
+	  
