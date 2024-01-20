@@ -1,6 +1,61 @@
+
+CAP Theorem
 -Latency vs Throughput
 -Availability vs Consistency(CAP Theorem)
 -Performance vs Scalability
 	-Vertical Scaling
 	-Horizontal Scaling
+	
+	
+# While doing System Design, we need to think about CAP Theorem at initial stage as it requires tradeoffs.
+1. CAP Theorem is defined as a Desirable Property of Distributed System with replicated data.
+C - Consistency
+A - Availability
+P - Partition Tolerance
+
+2.Distributed System is a collection of autonomous computer systems that are physically separated but are 
+connected by a centralized computer network that is equipped with distributed system software.
+             
+			 A
+			/ \
+		   B   C
+A-Application
+B-DB Node
+C-DB Node
+-In this distributed system, Application A can query from DB Node B and DB Node C.
+-B and C are far apart but are syncing with each other, storing replicated data.
+-Replicated data means, Data of B is replicated in C all time.
+
+-CAP Theorem states that of all the three properties only 2 can be used at a time, meaning all three CAP properties in a distributed system cannot be used simultaneoulsy.
+-Either CA or AP or CP can be used at a time in a distributed system.
+
+
+2. Consistency 
+-It means, the same data is available at both Data Node B and C.
+-Meaning, If Application A, writes in Data B to change the value of k=4 to k=5, when Application A reads from Data Node C, value of k is 5 here too.
+-Meaning Data Node B and Data Node C are maintaing consistency by syncing with each other.
+
+3. Availability
+-It states that both the Data Node B and C should atleast inform all the time.
+-All nodes should respond. Response can be success or failure, but there should be a response from all the nodes.
+
+4. Partition Tolerance
+-It states that even there is a break in communication betweeen Node B and C, application should be able to query from both/all the Nodes.
+-Even if B and C are unable to communicate, A should be able to query from both DBs.
+-The crux is system should be up even after break in communication betweeen nodes.
+
+5-Possible - CA, AP, CP
+-Not Possible - CAP
+
+6. Why we cannot use all 3 CAP properties together?
+-When we try to design a distributed system with all 3 CAP properties:
+A. If we implemement AP in CAP, these means that there is a break in communication between Node B and C, thus data replicating is not possible, thus on Consistency as C.
+B. If we want to implemement Consistency C in CAP but there is a Partition Tolerance P in the system, we need to keep down a node A or C, thus even if there is a Partition Tolerance
+Consistency C is maintained as same data data is retrieved when we do operations like write and read multiple times in DB. But since a node is down, Availability is not there.
+Thus CP in CAP is implememented, Availability A is compromised. System is Up but with one node.
+C. We can achieve CA in CAP but Partition Tolerance P, need to be sacrificed as with P in place, there can either be C or A. Otherwise whole system goes down.
+
+7. When designing a system never tradeoff on Partition Tolerance.
+-Thus either CP or AP is utilised.
+
 

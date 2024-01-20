@@ -1,0 +1,6 @@
+Factory Pattern
+1. Creation of an object on the basis of a condition, we implement factory pattern.
+2. It helps us to avoid duplicacy of code.
+
+Abstarct Factory Pattern
+1. It is Factory of Factory Pattern.
